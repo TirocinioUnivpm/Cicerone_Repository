@@ -692,12 +692,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1826467332}
-        m_MethodName: 
+      - m_Target: {fileID: 1826467337}
+        m_MethodName: caricaScenaVuforia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -750,6 +750,7 @@ GameObject:
   - component: {fileID: 1826467334}
   - component: {fileID: 1826467333}
   - component: {fileID: 1826467337}
+  - component: {fileID: 1826467338}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -827,7 +828,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826467332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d986b35d2347ab848b084722aa3c48cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fbd6e482dafc144ea5cb71620b0a97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1826467338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826467332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d03b0db3c92e54ba8cca3d899b4300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1832670290
