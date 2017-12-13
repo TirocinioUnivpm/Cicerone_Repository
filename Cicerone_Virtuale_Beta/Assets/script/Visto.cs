@@ -6,8 +6,8 @@ public class Visto : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        PlayerPrefs.SetInt("isFirstTime", 0);
-
+        PlayerPrefs.SetInt("isFirstTime", 1);
+        PlayerPrefs.Save();
     }
 
     // Update is called once per frame

@@ -17,9 +17,9 @@ public class CambiaScena : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("isFirstTime") != 1)
         {
+            
             SceneManager.LoadScene("Intro");
-            PlayerPrefs.SetInt("isFirstTime", 1);
-            PlayerPrefs.Save();
+            
 
         }
         else
