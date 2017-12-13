@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="provadettaglio" size="2.000000 3.605263" />
+    <ImageTarget name="71PL7coG4jL" size="1.000000 1.413300" />
+    <ImageTarget name="9788838668005" size="10.000000 14.285714" />
+  </Tracking>
+</QCARConfig>
