@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
 
-public class toVuforia : MonoBehaviour {
+public class ToVuforia : MonoBehaviour {
     
 
 	// Use this for initialization
@@ -12,10 +11,21 @@ public class toVuforia : MonoBehaviour {
         VuforiaBehaviour.Instance.enabled = false;
 
     }
-	public void caricaScenaVuforia(string prova_vuforia)
+	public void caricaScenaVuforia()
     {
-        
-        SceneManager.LoadScene(prova_vuforia);
+         if (PlayerPrefs.GetInt("isFirstTime") != 1)
+          {
+              SceneManager.LoadScene("guida");
+              PlayerPrefs.SetInt("isFirstTime", 1);
+              PlayerPrefs.Save();
+
+          }
+          else
+          {
+              SceneManager.LoadScene("prova vuforia");
+            
+          }
+        //SceneManager.LoadScene("prova vuforia");
     }
 	// Update is called once per frame
 	void Update () {
