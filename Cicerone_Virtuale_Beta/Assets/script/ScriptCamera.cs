@@ -1,25 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
 public class ScriptCamera : MonoBehaviour {
     public bool on;
     public Camera cameraVuforia;
     public Camera cameraScroll;
-
-    // Use this for initialization
+    
     void OnMouseDown(){
 
         if (on)
         {
-            cameraVuforia.enabled = false;
+          cameraVuforia.enabled = false;
             cameraScroll.enabled = true;
+            VuforiaBehaviour.Instance.enabled = false;
             on = false;
         }
         else
         {
-            cameraVuforia.enabled = true;
+          cameraVuforia.enabled = true;
             cameraScroll.enabled = false;
+            VuforiaBehaviour.Instance.enabled = true;
             on = true;
         }
 		
