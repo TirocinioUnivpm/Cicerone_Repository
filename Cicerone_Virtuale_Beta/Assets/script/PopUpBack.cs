@@ -21,8 +21,8 @@ public class PopUpBack : MonoBehaviour {
         Debug.Log("entrato in avvisoRitornoPAGINIZ");
         TheNextFlow.UnityPlugins.MobileNativePopups.OpenAlertDialog(
 
-               ":-(", "Vuoi ritornare alla pagina iniziale?",
-               "SI", "NO", () => { SceneManager.LoadScene("prova pagina iniziale cicerone"); }, () => { Debug.Log("è stato premuto no"); });
+               ":-(", "cosa vuoi fare?",
+               "Torna al menù", "Esci", () => { SceneManager.LoadScene("prova pagina iniziale cicerone"); }, () => { Application.Quit(); });
     }
 
 }
