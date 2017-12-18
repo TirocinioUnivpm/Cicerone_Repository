@@ -4,25 +4,23 @@ using UnityEngine;
 using Vuforia;
 
 public class ScriptCamera : MonoBehaviour {
-    public bool on;
+    
     public Camera cameraVuforia;
     public Camera cameraScroll;
     
     void OnMouseDown(){
 
-        if (on)
+        if (cameraVuforia.gameObject.activeInHierarchy)
         {
-          cameraVuforia.enabled = false;
-            cameraScroll.enabled = true;
-            VuforiaBehaviour.Instance.enabled = false;
-            on = false;
+            cameraVuforia.gameObject.SetActive(false);
+            cameraScroll.gameObject.SetActive(true);
+            
+            
         }
         else
         {
-          cameraVuforia.enabled = true;
-            cameraScroll.enabled = false;
-            VuforiaBehaviour.Instance.enabled = true;
-            on = true;
+            cameraVuforia.gameObject.SetActive(true);
+            cameraScroll.gameObject.SetActive(false);
         }
 		
 	}
