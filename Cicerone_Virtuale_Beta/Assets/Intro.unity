@@ -215,6 +215,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -484,9 +485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6cac44fbbc61b04c809bd322be0034d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myFirstImage: {fileID: 21300000, guid: ed8f7bfd8b5b70548bc5cb3572e4fbd4, type: 3}
+  myFirstImage: {fileID: 21300000, guid: 7ac0a14de819a814f958364ae48d9c50, type: 3}
   mySecondImage: {fileID: 21300000, guid: 3c7e4653af6087e42b0a15107321883c, type: 3}
-  myThirdImage: {fileID: 21300000, guid: 766e7cc65898d6c4e8420a3ca727665e, type: 3}
+  myThirdImage: {fileID: 21300000, guid: db70cae7600860d4fadc3fead98b8751, type: 3}
 --- !u!114 &422934761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +507,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ed8f7bfd8b5b70548bc5cb3572e4fbd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ac0a14de819a814f958364ae48d9c50, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -882,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5725, y: 0}
   m_AnchorMax: {x: 1, y: 0.0688024}
-  m_AnchoredPosition: {x: 2, y: 0.67973}
+  m_AnchoredPosition: {x: 2, y: 0.6796875}
   m_SizeDelta: {x: 74.3, y: 84.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638090895
@@ -1004,7 +1005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.40250003, y: 0.0688024}
-  m_AnchoredPosition: {x: -0.17637, y: 0.74146}
+  m_AnchoredPosition: {x: -0.17636108, y: 0.7414551}
   m_SizeDelta: {x: 38.106, y: 88.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826708887
