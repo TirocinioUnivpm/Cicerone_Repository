@@ -7,21 +7,22 @@ public class ScriptAudio : MonoBehaviour {
 
     public AudioSource mp3;
     public GameObject sfera;
-   
+    
+
     public bool attivo;
     // Use this for initialization
-    void Start()
+    public void Start()
     {
-        attivo = false;
+        attivo = true;
     }
     void OnMouseDown()
 
     {
-        if (!attivo)
+        if (attivo == false)
         {
             mp3.Play();
             attivo = true;
-            sfera.GetComponent<Renderer>().material.color = Color.red;
+            sfera.GetComponent<Renderer>().material.color= Color.red;
         }
         else
         {
