@@ -997,9 +997,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "B e n v e n u t o   v i s i t a t o r e ,    t u t t a   l ' a r t e   \xE8
-    \  a   p o r t a t a   \nd i    m a n o ,   p r o v a n e   l a    \nd e l i c
-    a t e z z a.. "
+  m_Text: "B e n v e n u t o   v i s i t a t o r e , \nt u t t a   l ' a r t e   \xE8
+    \  a   p o r t a t a   \nd i    m a n o ,   p r o v a n e   l a       d e l i
+    c a t e z z a.. "
 --- !u!222 &2141369678
 CanvasRenderer:
   m_ObjectHideFlags: 0
