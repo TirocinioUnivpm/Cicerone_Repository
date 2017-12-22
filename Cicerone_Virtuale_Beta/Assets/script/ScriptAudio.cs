@@ -4,14 +4,12 @@ using UnityEngine;
 
 
 public class ScriptAudio : MonoBehaviour {
-    public Camera camera;
+    public Camera cam;
     public AudioSource mp3;
     public GameObject sfera;
-    public GameObject animazione;
-    public bool attivo;
+    //public GameObject animazione;
+    private bool attivo;
     float distanzaX;
-    float distanzaY;
-    float distanzaZ;
     public float costanteDistanza;
     
     void Awake()
@@ -22,89 +20,38 @@ public class ScriptAudio : MonoBehaviour {
     // Use this for initialization
     public void Start()
     {
-        
+        attivo = false;
     }
 
     public void Update()
     {
-        if (sfera.activeSelf)
+
+        distanzaX = Vector3.Distance(cam.transform.position, sfera.transform.position);
+
+
+        if (distanzaX < costanteDistanza)
         {
-            distanzaX = (sfera.transform.position.x - camera.transform.position.x);
-            distanzaY = (sfera.transform.position.y - camera.transform.position.y);
-            distanzaZ = (sfera.transform.position.z - camera.transform.position.z);
-            SettaDistanza(distanzaX, distanzaY, distanzaZ);
-
-
-            if (InRange(distanzaX, distanzaY, distanzaZ))
+            if (attivo == false)
             {
-
-
-
                 mp3.Play();
                 attivo = true;
                 sfera.GetComponent<Renderer>().material.color = Color.yellow;
-                animazione.SetActive(false);
-
-
+                Debug.Log("sei vicino");
             }
-            else
-            {
+            else { Debug.Log("sei vicino ma è già attivo"); }
 
-                //mp3.Stop();
-                attivo = false;
-                sfera.GetComponent<Renderer>().material.color = Color.white;
-                Debug.Log("sei troppo lontano");
 
-            }
-        }else
-        {
-            Debug.Log("non sono attivo");
         }
-    }
-    public void SettaDistanza(float x, float y, float z)
-    {
-        if (x < 0)
+        else if(distanzaX > costanteDistanza && attivo == true)
         {
-            x = -x;
-        }else if (y < 0)
-        {
-            y = -y;
-        }else if (z<0)
-        {
-            z = -z;
-        }else
-        {
-            Debug.Log("le posizioni sono positive");
-        }
-    }
-
-    public bool InRange( float x, float y, float z)
-    {
-        if(x<costanteDistanza && y<costanteDistanza && z<costanteDistanza)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    void OnMouseDown()
-
-    {
-        if (attivo == false)
-        {
-            mp3.Play();
-            attivo = true;
-            sfera.GetComponent<Renderer>().material.color= Color.yellow;
-            animazione.SetActive(false);
-        }
-        else
-        {
-            mp3.Pause();
+            mp3.Stop();
             attivo = false;
             sfera.GetComponent<Renderer>().material.color = Color.white;
-            animazione.SetActive(true);
+            Debug.Log("troppo lontano tolgo audio");
         }
+        else { Debug.Log("sei troppo lontano"); }
+
+      
     }
+        
 }
