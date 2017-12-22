@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="tutankhamon"/>
+</Tracking>
+
+<Assembly name="tutankhamons_assembly">
+<Part name="tutankhamon" translation="0 0 0" rotation="AD: 0 0 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.264815 10.0491 18.3788" rotation="AD: 0.999999999999989 -0.00018795795775032324 0.0008072860294495429 206.213">
+
+</EntryPoint>
+
+</Assembly>
+</QCARConfig>
