@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FinestraDebug: MonoBehaviour
+public class FinestraDebug : MonoBehaviour
 {
     TextMesh textMesh;
 
@@ -22,9 +20,10 @@ public class FinestraDebug: MonoBehaviour
         Application.logMessageReceived -= LogMessage;
     }
 
+   
     public void LogMessage(string message, string stackTrace, LogType type)
-    {
-        if (textMesh.text.Length > 300)
+    { try {
+        if (textMesh.text.Length > 30)
         {
             textMesh.text = message + "\n";
         }
@@ -32,5 +31,7 @@ public class FinestraDebug: MonoBehaviour
         {
             textMesh.text += message + "\n";
         }
-    }
+    }catch ( UnassignedReferenceException e){ Debug.Log("gestita eccezione "+e); }
+  } 
+    
 }

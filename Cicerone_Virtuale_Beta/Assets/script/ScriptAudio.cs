@@ -60,9 +60,12 @@ public class ScriptAudio : MonoBehaviour {
             sfera.GetComponent<Renderer>().material.color = Color.white;
             Debug.Log("troppo lontano tolgo audio");
         }
-        else { Debug.Log("sei troppo lontano"); }
+        else {// Debug.Log("sei troppo lontano");
+        }
 
       
     }
+
         
+    
 }
