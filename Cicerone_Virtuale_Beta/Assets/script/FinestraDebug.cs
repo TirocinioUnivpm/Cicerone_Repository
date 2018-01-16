@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FinestraDebug : MonoBehaviour
 {
@@ -7,8 +8,10 @@ public class FinestraDebug : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        textMesh = gameObject.GetComponentInChildren<TextMesh>();
-    }
+        
+            textMesh = gameObject.GetComponentInChildren<TextMesh>();
+        
+        }
 
     void OnEnable()
     {
@@ -22,16 +25,18 @@ public class FinestraDebug : MonoBehaviour
 
    
     public void LogMessage(string message, string stackTrace, LogType type)
-    { try {
-        if (textMesh.text.Length > 30)
+    {
+        try
         {
-            textMesh.text = message + "\n";
-        }
-        else
-        {
-            textMesh.text += message + "\n";
-        }
-    }catch ( UnassignedReferenceException e){ Debug.Log("gestita eccezione "+e); }
+            if (textMesh.text.Length > 30)
+            {
+                textMesh.text = message + "\n";
+            }
+            else
+            {
+                textMesh.text += message + "\n";
+            }
+        }catch(NullReferenceException ex) { }
   } 
     
 }
